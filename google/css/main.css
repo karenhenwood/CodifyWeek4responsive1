@@ -1,0 +1,241 @@
+/*-----------------------------------------------All site styling------------------------------------------------------------------*/
+/*start everything with black*/
+* {
+  color: #000;
+}
+/*styling common to all body elements*/
+body {
+  background: none repeat scroll 0 0 #fff;
+  color: #222;
+  margin: 0;
+}
+/*styling common to all anchor elements*/
+a { 
+  color:#222;
+  /*gets rid of underline on links*/
+  text-decoration: none;
+}
+/*styling for links on hover over*/
+a:hover {
+  color: #222;
+  /*add underline when user hovers*/
+  text-decoration: underline;
+}
+/*don't think this is necessary. buttons don't get underlined on hover even without it*/
+/*a.button:hover {
+  remove underline from hovered on buttons
+  text-decoration: none;
+}*/
+
+/*-------------------------------------------Styling for top bar of site-----------------------------------------------------------*/
+.top-navigation{
+  width: 100%;
+  text-align: right;
+  padding: 0;
+}
+.top-navigation li{
+	display: inline-block;
+	padding: 10px 15px 0 0;
+	vertical-align: middle;
+	font-size: 13px;
+}
+.fa {
+  font-size: 20px;
+  vertical-align: top;
+  opacity: 0.7;
+  cursor: default;
+}
+.fa:hover {
+	opacity: 1.0;
+}
+.share-button{
+  background-color: #f2f2f2;
+  padding: 7px 15px;
+  cursor: default;
+}
+.share-button:hover{
+  background-color: #E1E1E1;
+}
+.profile-img{
+	border-radius:25px;
+	height: 32px;
+	width: 32px;
+}
+/*-----------------------------------------------Styling for mid section of site--------------------------------------------------------*/
+.search-box{
+  position: absolute;
+  width: 100%;
+}
+.search-box img{
+  width: 14%;
+  padding: 217px 0 24px 0;
+  display: block;
+  margin: 0 auto;
+}
+.search-box input{
+  width: 36%;
+  margin: 0 auto;
+  padding: 5px;
+  border: 1px solid #d9d9d9;
+  font-size: 16px;
+  border-radius: 5px;
+  display: block;
+}
+/*lightens border color on focus on input not really visible with 1px border*/
+.search-box input:focus {
+  border-color: #f5f5f5;
+}
+.search-buttons{
+  text-align: center;
+  padding-left: 0;
+}
+.search-buttons button{
+  background-color: #f5f5f5;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
+  color: #666;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 27px;
+  margin: 17px 6px;
+  padding: 0 12px;
+  display: inline-block;
+  cursor: pointer;
+}
+/*magnifies search buttons on hover. typo in class name in replica page*/
+.search-buttons button:hover {
+  background-color:#f8f8f8;
+  border: 1px solid #c6c6c6;
+  box-shadow:0 1px 1px rgba(0,0,0,0.1);
+  color:#333;
+}
+/*---------------------------------------------Styling for bottom section of site--------------------------------------------------------*/
+.bottom-site-links{
+  position: absolute;
+  bottom: 0 !important;
+  width: 100%;
+  background-color: #f2f2f2;
+  border-top: 1px solid #e4e4e4;
+}
+.left-site-links{
+  float: left;
+  padding-left: 20px;
+  margin: 0;
+}
+.right-site-links{
+  float: right;
+  padding-right: 10px;
+  margin: 0;
+}
+.left-site-links li, 
+.right-site-links  li{
+  display: inline;
+  line-height: 40px;
+  list-style: none;
+}
+.right-site-links li a:nth-child(1) {
+  padding-right:8px;
+}
+.left-site-links li:nth-child(2),
+.left-site-links li:nth-child(3) {
+  margin-left:7px;
+}
+.right-site-links li a,
+.left-site-links li a{
+    color: #666;
+    margin: 2px 10px 0;
+    letter-spacing: 0.1px;
+    font-size: 14px;
+}
+/*---------------------------------------------Media Queries--------------------------------------------------------*/
+/*------Nav Bar Adjustments-----*/
+/*------width-----*/
+@media(max-width: 465px){
+  .top-navigation ul{
+    display: block;
+    text-align: left;
+    padding: 0;
+    width: 100%;
+  }
+  .top-navigation li{
+    display: block;
+    text-align: left;
+    padding: 10px 15px 10px 30px;
+    border-bottom: 1px solid #333;
+    margin: 0 10px 0 10px;
+  }
+  .top-navigation a, div, span{
+    display: inline-block;
+    width: 100%;
+  }
+  .top-navigation span{
+    padding-right:0;
+    margin-right: 10px;
+  }
+}
+
+/*------Search Bar Adjustments-----*/
+/*------width-----*/
+@media(max-width: 640px){
+  .search-box{
+    margin:0;
+  }
+  .search-box img{
+    padding-top: 40px;
+  }
+}
+@media(max-width: 640px){
+  .search-box button{
+    font-size: 10px;
+  } 
+}
+/*------height-----*/
+@media(max-height: 600px){
+  .search-box{
+    margin:0;
+  }
+  .search-box img{
+    padding-top: 40px;
+  }
+}
+
+/*------Bottom Bar Adjustments-----*/
+/*------width-----*/
+@media(max-width: 530px){
+  .left-site-links li{
+    display: block;
+    width: 100%;
+    line-height: 20px;
+  }
+  .right-site-links li{
+    display: block;
+    width: 100%;
+    line-height: 20px;
+  }
+  .left-site-links li a{
+   font-size: 10px;
+   line-height: 20px;
+
+  }
+  .right-site-links li a{
+    font-size: 10px;
+    line-height: 20px;
+  }
+}
+
+@media(max-width: 530px){
+  .left-site-links ul{
+    display: block;
+    width: 100%;
+  }
+  .right-site-links ul{
+    display: block;
+    width: 100%;
+  }
+
+.left-site-links li:nth-child(2),
+.left-site-links li:nth-child(3) {
+  margin-left:0px;
+ }
+}
+
